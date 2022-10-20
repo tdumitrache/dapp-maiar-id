@@ -1,0 +1,41 @@
+{
+    "name": "dapp-maiar-id-test",
+    "version": "1.0.7",
+    "description": "A library which extends the functionality of dapp-core and implements using authorized APIs to the dapp-template.",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/tdumitrache/dapp-maiar-id.git"
+    },
+    "main": "dist/cjs/index.js",
+    "module": "dist/esm/index.js",
+    "files": [
+        "dist"
+    ],
+    "scripts": {
+        "build": "rm -rf dist/ && prettier --write src//**/*.ts && npm run build:esm && npm run build:cjs",
+        "build:esm": "tsc",
+        "build:cjs": "tsc --module CommonJS --outDir dist/cjs"
+    },
+    "file": [
+        "dist"
+    ],
+    "author": "Theodor Dumitrache",
+    "license": "MIT",
+    "devDependencies": {
+        "@types/node": "^18.11.3",
+        "@types/react": "^18.0.14",
+        "@types/react-dom": "^18.0.5",
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "typescript": "^4.8.4"
+    },
+    "peerDependencies": {
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "@types/node": "^18.11.3",
+        "@types/react": "^18.0.14",
+        "@types/react-dom": "^18.0.5",
+        "@elrondnetwork/dapp-core": "^2.1.1",
+        "axios": "^1.1.3"
+    }
+}
